@@ -1,0 +1,31 @@
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(5, 75px);
+    grid-template-rows: repeat(5, 75px);
+}
+.item{
+    border: #000;
+}
+.button{
+    margin: 5px;
+    background-color:darkred;
+    color: #fff;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    
+    display: grid;
+    justify-content: center;
+    border-radius: 10px;
+}
+.button:hover{
+    background: rgb(182, 1, 1);
+    transform: scale(1.1);
+}
+.linhabotao{
+    display: flex;
+    justify-content: center;
+
+}
