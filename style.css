@@ -1,3 +1,16 @@
+h1{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  justify-self: center;
+  font-size: 50px;
+}
+
+body{
+    place-items: center;
+    height: 100vh;
+    background-color: whitesmoke;
+}
 
 .container{
     display: grid;
@@ -44,6 +57,8 @@ button.executar:hover{
     max-width: 400px;
     grid-template-rows: 80px 60px;
     grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-content: center;
     
 
 }
