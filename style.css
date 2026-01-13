@@ -73,7 +73,8 @@ button.executar:hover{
     grid-column: 1/4;
     width: 350px;
     height: 60px;
-    background-color: darkcyan;
+    background-color: gray;
+    outline: #fff solid;
     border-radius: 20px;
     align-items: center;
 }
