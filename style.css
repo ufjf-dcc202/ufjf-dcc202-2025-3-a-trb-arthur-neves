@@ -4,12 +4,13 @@ h1{
   font-style: normal;
   justify-self: center;
   font-size: 50px;
+  color: #fff;
 }
 
 body{
     place-items: center;
     height: 100vh;
-    background-color: whitesmoke;
+    background-color: #202020;
 }
 
 .container{
@@ -19,12 +20,13 @@ body{
     grid-template-columns: repeat(5, 75px);
     grid-template-rows: repeat(5, 75px);
     margin-bottom: 20px;
+    gap: 4px;
 }
 .item{
     height: 75px;
     width: 75px;
     border: 2px solid rgb(35, 35, 35);
-    
+    border-radius: 10px;
     
     background-color: rgb(97, 97, 97);
 
@@ -69,4 +71,9 @@ button.executar:hover{
 .cmdline{
     display: grid;
     grid-column: 1/4;
+    width: 350px;
+    height: 60px;
+    background-color: darkcyan;
+    border-radius: 20px;
+    align-items: center;
 }
