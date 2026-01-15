@@ -1,4 +1,4 @@
-h1{
+h1{     /* deixar o titulo bonito*/
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -7,13 +7,13 @@ h1{
   color: #fff;
 }
 
-body{
+body{ /*centraliza e muda a cor da pagina toda*/
     place-items: center;
     height: 100vh;
     background-color: #202020;
 }
 
-.container{
+.container{ 
     display: grid;
     justify-content: center;
     align-items: center;
@@ -30,6 +30,9 @@ body{
     
     background-color: rgb(97, 97, 97);
 
+    display: grid;
+    font-size: 50px;
+    place-items: center;
 }
 button{
     margin: 5px;
