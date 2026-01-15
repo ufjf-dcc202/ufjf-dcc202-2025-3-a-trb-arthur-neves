@@ -51,7 +51,7 @@ button:hover{
     transform: scale(1.05);
 }
 
-button.executar:hover{
+button#executar:hover{
     background: rgb(17, 145, 0);
     transform: scale(1.05);
 }
@@ -67,11 +67,11 @@ button.executar:hover{
     
 
 }
-.executar{
+#executar{
     background-color: rgb(9, 178, 9);
 }
 
-.cmdline{
+#cmdline{
     display: grid;
     grid-column: 1/4;
     width: 350px;
