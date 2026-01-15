@@ -7,10 +7,26 @@ const player = {
 
 let lampX, lampY;
 
-const cimabtn = document.getElementById('frente');
-cimabtn.addEventListener('click', () => {
-        document.getElementById("cmdline").innerText += "⬆️";
-    })
+//pra mostrar os movimentos na barra com a sequencia de codigo
+const cmd = document.getElementById("cmdline");
+
+
+document.getElementById('frente').addEventListener('click', () => {
+    cmd.innerText += "⬆️";
+})
+
+document.getElementById('direita').addEventListener('click', () => {
+    cmd.innerText += "➡️";
+})
+
+document.getElementById('esquerda').addEventListener('click', () => {
+    cmd.innerText += "⬅️";
+})
+
+document.getElementById('limpar').addEventListener('click', () => {
+    cmd.innerText = "";
+
+})
 
 
 
