@@ -1,8 +1,8 @@
 const player = {
     x: 0,
     y: 0,
-    direction: 1 //determinei com numeros cada uma das direcoes, sendo 1
-                 //pra cima e o resto aumenta no sentido horario, tipo 2 na direita 
+    direction: 0 //determinei com numeros cada uma das direcoes, sendo 0
+                 //pra cima e o resto aumenta no sentido horario 
 };
 
 let lampX, lampY;
