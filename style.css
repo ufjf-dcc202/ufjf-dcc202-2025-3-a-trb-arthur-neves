@@ -16,6 +16,13 @@ body{ /*centraliza e muda a cor da pagina toda*/
 
 /*criei a barra lateral onde vai ficar os botoes com tudo*/
 #sidebar {
+    width: 10%;
+    height: 100%;
+}
+
+#game{
+    width: 90% ;
+    height: 100%;
 
 }
 
@@ -38,7 +45,7 @@ body{ /*centraliza e muda a cor da pagina toda*/
 
     display: grid;
     font-size: 50px;
-    place-items: center;
+    place-items: center; /*pra centralizar o robô*/
 }
 button{
     margin: 5px;
