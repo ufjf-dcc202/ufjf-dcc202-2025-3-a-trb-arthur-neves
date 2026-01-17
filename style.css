@@ -8,12 +8,18 @@ h1{     /* deixar o titulo bonito*/
 }
 
 body{ /*centraliza e muda a cor da pagina toda*/
+    display: flex;
     place-items: center;
     height: 100vh;
     background-color: #202020;
 }
 
-.container{ 
+/*criei a barra lateral onde vai ficar os botoes com tudo*/
+#sidebar {
+
+}
+
+.grid{ 
     display: grid;
     justify-content: center;
     align-items: center;
@@ -80,4 +86,5 @@ button#executar:hover{
     outline: #fff solid;
     border-radius: 20px;
     align-items: center;
+    overflow-x: auto;
 }
