@@ -7,22 +7,28 @@ h1{     /* deixar o titulo bonito*/
   color: #fff;
 }
 
-body{ /*centraliza e muda a cor da pagina toda*/
+#tudo{ /*centraliza e muda a cor da pagina toda*/
     display: flex;
-    place-items: center;
     height: 100vh;
     background-color: #202020;
 }
 
 /*criei a barra lateral onde vai ficar os botoes com tudo*/
 #sidebar {
-    width: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
     height: 100%;
 }
 
 #game{
-    width: 90% ;
+    width: 70% ;
     height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 
