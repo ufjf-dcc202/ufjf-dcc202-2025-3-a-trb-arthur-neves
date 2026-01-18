@@ -1,7 +1,7 @@
 body{
     background-color: #202020;
-
 }
+
 h1{     /* deixar o titulo bonito*/
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
@@ -13,7 +13,15 @@ h1{     /* deixar o titulo bonito*/
 
 #tudo{ /*centraliza e muda a cor da pagina toda*/
     display: flex;
+    flex-direction: row;
     height: 100vh;
+}
+
+#botoes{
+    flex: 1;
+    width: auto;
+    display: flex;
+
 }
 
 /*criei a barra lateral onde vai ficar os botoes com tudo*/
@@ -22,28 +30,31 @@ h1{     /* deixar o titulo bonito*/
     flex-direction: column;
     width: 30%;
     height: 100%;
+    background-color: gray;
+
 }
 
-#botoes{
-    top: 0;
-    flex: 1;
-    width: auto;
-    display: flex;
-
+#sidebar > * {
+    border-radius: 30px;
+    border: 20px;
 }
 
 #main{
     flex: 2;
     width: 100%;
+    height: 200px;
 }
 
 #p1{
     flex: 1;
+    height: 150px;
 }
 
 #p2{
     flex: 1;
+    height: 150px;
 }
+
 
 #game{
     width: 70% ;
