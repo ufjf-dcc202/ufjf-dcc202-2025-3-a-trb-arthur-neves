@@ -30,14 +30,25 @@ let lampPos = document.getElementById(coord(lampada.x, lampada.y)); //pega a pos
 lampPos.appendChild(lamp); //coloca a lampada na posicao determinada
 
 
-function andar(){
-    if(player.direction === 0){
-        player.y -= 1;
-    } else if(player.direction === 1){
-        player.x += 1;
-    } else if(player.direction === 2){
-        player.y += 1;
-    } else if(player.direction === 3){
-        player.x -= 1;
+function andar(){ //funcao pra fazer o robo andar
+    const min = 1, max = 5;
+    
+
+    let movimento = [
+        {nx: 0, ny: -1},  //de acordo com a direcao do robo ele pega um
+        {nx: 1, ny: 0},//valor pra adicionar e consequentemente movimentar
+        {nx: 0, ny: 1},
+        {nx: -1, ny: 0}
+    ];
+
+    let movimentos = movimento[player.direction];
+    let novoX = movimentos.nx + player.x;
+    let novoY = movimentos.ny + player.y;
+
+    if(novoX > max || novoX < min || novoY > max || novoY < min){
+        return;
     }
+
+
+
 }
