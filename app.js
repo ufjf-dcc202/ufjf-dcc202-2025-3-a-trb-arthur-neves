@@ -1,32 +1,27 @@
 const player = {
-    x: 0,
-    y: 0,
+    x: 1,
+    y: 5,
     direction: 0 //determinei com numeros cada uma das direcoes, sendo 0
                  //pra cima e o resto aumenta no sentido horario 
 };
 
-let lampX, lampY;
+const lampada = {
+    x: 2, 
+    y: 3
+}
 
-//pra mostrar os movimentos na barra com a sequencia de codigo
-const cmd = document.getElementById("cmdline");
+function coord(x, y){
+    return '${y}${x}'; //pra 'traduzir' as coordenadas 
+}
+
+const start ={
+    document.getElementById(coord(1,5))
+}
+
+let robo = document.getElementById('robo');
 
 
-document.getElementById('frente').addEventListener('click', () => {
-    cmd.innerText += "⬆️";
-})
 
-document.getElementById('direita').addEventListener('click', () => {
-    cmd.innerText += "➡️";
-})
-
-document.getElementById('esquerda').addEventListener('click', () => {
-    cmd.innerText += "⬅️";
-})
-
-document.getElementById('limpar').addEventListener('click', () => {
-    cmd.innerText = "";
-
-})
 
 
 
