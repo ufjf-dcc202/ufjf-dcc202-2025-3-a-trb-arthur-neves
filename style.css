@@ -11,9 +11,8 @@ h1{     /* deixar o titulo bonito*/
   color: #fff;
 }
 
-#tudo{ /*centraliza e muda a cor da pagina toda*/
+#tudo{ /*centraliza*/
     display: flex;
-    flex-direction: row;
     height: 100vh;
 }
 
@@ -46,16 +45,20 @@ h1{     /* deixar o titulo bonito*/
     background-color: #2a2a2a;
 }
 
+/*texto que fica dentro dos cards */
 h4 {
     color: #fff;
     padding-left: 15px;
     font-size: 15px;
 }
 
+/*aqui é onde vai entrar as sequencias de comando*/
 .bloco {
+    display: flex;
     width: 100%;
     background-color: #202020;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: space-between;
 }
 
 
@@ -74,6 +77,14 @@ h4 {
     height: 200px;
 }
 
+.seletor {
+    margin: 5px;
+    border-radius: 15px;
+    background-color: #737373;
+    height: 3ch;
+    float: inline-end;
+    cursor: pointer;
+}
 
 
 
@@ -111,7 +122,7 @@ button{
     border-radius: 10px;
 }
 
-
+/* hover pro botao mudar quando passar o mouse em cima*/
 button:hover{
     background: rgb(182, 1, 1);
     transform: scale(1.05);
