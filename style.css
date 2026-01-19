@@ -146,6 +146,11 @@ button#executar:hover{
 
 #executar{
     background-color: rgb(9, 178, 9);
+    grid-area: 1 / 5 / 3 / 6;
+    height: 150px;
+    font-size: 30px;
+    display: grid;
+    align-items: center;
 }
 
 button.seletor:hover {
