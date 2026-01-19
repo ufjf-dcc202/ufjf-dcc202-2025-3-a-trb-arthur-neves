@@ -4,6 +4,11 @@ const player = {
     direction: 0 //determinei com numeros cada uma das direcoes, sendo 0
                  //pra cima e o resto aumenta no sentido horario 
 };
+const comandos = {
+    main: [],
+    p1: [],
+    p2: []
+}
 
 const lampada = {
     x: 2, 
@@ -11,18 +16,18 @@ const lampada = {
 }
 
 function coord(x, y){
-    return '${y}${x}'; //pra 'traduzir' as coordenadas 
+    return `${y}${x}`; //pra 'traduzir' as coordenadas 
 }
 
-const start ={
-    document.getElementById(coord(1,5))
-}
-
+const start = document.getElementById(coord(player.x,player.y)); //determina o inicio
 let robo = document.getElementById('robo');
 
+start.appendChild(robo); //coloca o robo na posicao inicial 
 
 
-
+let lamp = document.getElementById('lamp');
+let lampPos = document.getElementById(coord(lampada.x, lampada.y));
+lampPos.appendChild(lamp); //coloca a lampada na posicao determinada
 
 
 function andar() {
