@@ -30,13 +30,34 @@ let lampPos = document.getElementById(coord(lampada.x, lampada.y)); //pega a pos
 lampPos.appendChild(lamp); //coloca a lampada na posicao determinada
 
 
+const botoes = document.querySelectorAll('.seletor');
+const bloco = document.querySelectorAll('.bloco');
+
+let selecionado = null;
+botoes.forEach((button) => {
+    button.addEventListener('click', () =>{
+
+        bloco.forEach(block => {
+            block.classList.remove('active');
+        });
+
+        const pai = button.closest('.bloco');
+
+        pai.classList.add('active');
+        selecionado = pai;
+        button.innerHTML= 'Selecionado';
+        console.log('selecionado é ', selecionado.id);
+    });
+
+});
+
 function andar(){ //funcao pra fazer o robo andar
     const min = 1, max = 5;
     
 
     let movimento = [
         {nx: 0, ny: -1},  //de acordo com a direcao do robo ele pega um
-        {nx: 1, ny: 0},//valor pra adicionar e consequentemente movimentar
+        {nx: 1, ny: 0},   //valor pra adicionar e consequentemente movimentar
         {nx: 0, ny: 1},
         {nx: -1, ny: 0}
     ];
