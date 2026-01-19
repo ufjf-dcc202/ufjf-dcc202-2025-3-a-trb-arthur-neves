@@ -16,12 +16,7 @@ h1{     /* deixar o titulo bonito*/
     height: 100vh;
 }
 
-#botoes{
-    flex: 1;
-    width: auto;
-    display: flex;
 
-}
 
 #game{
     flex: 7;
@@ -54,13 +49,15 @@ h4 {
 
 /*aqui é onde vai entrar as sequencias de comando*/
 .bloco {
-    display: flex;
     width: 100%;
     background-color: #202020;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    justify-content: space-between;
 }
 
+.blcheader {
+    display: flex;
+    justify-content: space-between;
+}
 
 #main{
     flex: 2;
@@ -78,8 +75,9 @@ h4 {
 }
 
 .seletor {
-    margin: 5px;
+    margin: 15px;
     border-radius: 15px;
+    align-content: center;
     background-color: #737373;
     height: 3ch;
     float: inline-end;
@@ -109,6 +107,17 @@ h4 {
     font-size: 50px;
     place-items: center; /*pra centralizar o robô*/
 }
+
+#botoes{
+    flex: 1;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+}
+
+
 button{
     margin: 5px;
     background-color:darkred;
@@ -120,6 +129,8 @@ button{
     display: grid;
     justify-content: center;
     border-radius: 10px;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* hover pro botao mudar quando passar o mouse em cima*/
@@ -137,4 +148,6 @@ button#executar:hover{
     background-color: rgb(9, 178, 9);
 }
 
-
+button.seletor:hover {
+    background-color: #8c8c8c;
+}
