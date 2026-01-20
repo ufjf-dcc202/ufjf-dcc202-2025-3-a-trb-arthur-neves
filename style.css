@@ -144,6 +144,7 @@ button{
     cursor: pointer;
     width: 110px;
     height: 60px;
+    border: none;
     
     display: grid;
     justify-content: center;
@@ -179,8 +180,9 @@ button#executar:hover{
     
 }
 
+/*pra colocar o botao transparente*/
 .active > div > button{
-    color: transparent;
+    color: transparent; 
     background-color: transparent;
-    
+    border: none;
 }
