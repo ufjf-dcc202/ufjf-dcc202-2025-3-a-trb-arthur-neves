@@ -33,22 +33,25 @@ lampPos.appendChild(lamp); //coloca a lampada na posicao determinada
 const botoes = document.querySelectorAll('.seletor');
 const bloco = document.querySelectorAll('.bloco');
 
+
+//tudo isso aqui pra selecionar o bloco de comandos que o jogador vai deixar o codigo dentro 
 let selecionado = null;
+let botaoselc = null;
 botoes.forEach((button) => {
     button.addEventListener('click', () =>{
 
         bloco.forEach(block => {
             block.classList.remove('active');
         });
+        botoes.forEach(b => {
+            b.classList.remove('selecionado')
+        });
 
         const pai = button.closest('.bloco');
-
+        const btn = button.classList.add('selecionado');
         pai.classList.add('active');
         selecionado = pai;
-        button.innerHTML= 'Selecionado';
-        console.log('selecionado é ', selecionado.id);
     });
-
 });
 
 function andar(){ //funcao pra fazer o robo andar

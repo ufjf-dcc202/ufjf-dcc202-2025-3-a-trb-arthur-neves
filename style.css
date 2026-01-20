@@ -172,6 +172,15 @@ button#executar:hover{
     align-items: center;
 }
 
-button.seletor:hover {
-    background-color: #8c8c8c;
+
+.active{
+    transform:scale(1.1);
+    outline: 1px solid #fff;
+    
+}
+
+.active > div > button{
+    color: transparent;
+    background-color: transparent;
+    
 }
