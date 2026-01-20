@@ -65,8 +65,10 @@ botaoExecutar.addEventListener('click', () =>{
 });
 
 function executarComandos() {
+    let i = 0;
     const blocoAtivo = comandos.main;
-    blocoAtivo.forEach((comando) => {
+    const intervalo = setInterval(() => {
+        const comando = blocoAtivo[i]; //pega o comando atual do bloco ativo
         if(comando === 'frente') {
             andar(); 
         } else if(comando === 'direita') {
@@ -74,8 +76,12 @@ function executarComandos() {
         } else if(comando === 'esquerda') {
             virarEsquerda();
         }
-});
-}
+        i++;
+        if(i >= blocoAtivo.length) {
+            clearInterval(intervalo); //para o intervalo quando acabar os comandos
+        }}, 300); //executa um comando a cada 300ms
+};
+
 
 
 function andar(){ //funcao pra fazer o robo andar
@@ -89,9 +95,9 @@ function andar(){ //funcao pra fazer o robo andar
         {nx: -1, ny: 0}
     ];
 
-    let movimentos = movimento[player.direction];
-    let novoX = movimentos.nx + player.x;
-    let novoY = movimentos.ny + player.y;
+    let movimentos = movimento[player.direction]; //pega pelo valor da direcao atual do robo
+    let novoX = movimentos.nx + player.x; //calcula a nova posicao x
+    let novoY = movimentos.ny + player.y; //calcula a nova posicao y
 
     if(novoX > max || novoX < min || novoY > max || novoY < min){
         return; //nao deixa ele sair do tabuleiro
