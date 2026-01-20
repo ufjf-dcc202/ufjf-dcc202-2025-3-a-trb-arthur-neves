@@ -48,8 +48,8 @@ botoes.forEach((button) => {
     });
 });
 
-//especie de loop pra selecionar os botoes de comando, juntando com
-//o anterior, os comandos vao sempre pro bloco selecionado 
+//seleciona os botoes de comando, juntando com o anterior,
+// os comandos vao sempre pro bloco selecionado 
 const cmd = document.querySelectorAll('.btn');
 
 cmd.forEach((button) => {
@@ -59,7 +59,18 @@ cmd.forEach((button) => {
     });
 });
 
+const botaoExecutar = document.getElementById('executar');
+botaoExecutar.addEventListener('click', () =>{
+    executarComandos();
+});
 
+function executarComandos() {
+    const blocoAtivo = comandos.main;
+    blocoAtivo.forEach((comando) => {
+        if(comando === 'frente') {
+            andar(); 
+}});
+}
 
 
 
@@ -80,9 +91,13 @@ function andar(){ //funcao pra fazer o robo andar
     let novoY = movimentos.ny + player.y;
 
     if(novoX > max || novoX < min || novoY > max || novoY < min){
-        return;
+        return; //nao deixa ele sair do tabuleiro
     }
 
+    player.x = novoX; //pra atualizar a posicao do player sempre que ele andar
+    player.y = novoY;
 
+    let posicaoAtual = document.getElementById(coord(novoX, novoY));
+    posicaoAtual.appendChild(robo);
 
 }
