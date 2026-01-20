@@ -69,10 +69,13 @@ function executarComandos() {
     blocoAtivo.forEach((comando) => {
         if(comando === 'frente') {
             andar(); 
-}});
+        } else if(comando === 'direita') {
+            virarDireita();
+        } else if(comando === 'esquerda') {
+            virarEsquerda();
+        }
+});
 }
-
-
 
 
 function andar(){ //funcao pra fazer o robo andar
@@ -100,4 +103,11 @@ function andar(){ //funcao pra fazer o robo andar
     let posicaoAtual = document.getElementById(coord(novoX, novoY));
     posicaoAtual.appendChild(robo);
 
+}
+
+function virarDireita(){ //funcao pra fazer o robo virar pra direita
+    player.direction= (player.direction+1) % 4;
+};
+function virarEsquerda(){ //funcao pra fazer o robo virar pra esquerda
+    player.direction= (player.direction-1 + 4) % 4;
 }
