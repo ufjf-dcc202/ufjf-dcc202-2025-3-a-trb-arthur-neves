@@ -36,23 +36,33 @@ const bloco = document.querySelectorAll('.bloco');
 
 //tudo isso aqui pra selecionar o bloco de comandos que o jogador vai deixar o codigo dentro 
 let selecionado = null;
-let botaoselc = null;
 botoes.forEach((button) => {
     button.addEventListener('click', () =>{
 
         bloco.forEach(block => {
             block.classList.remove('active');
         });
-        botoes.forEach(b => {
-            b.classList.remove('selecionado')
-        });
-
         const pai = button.closest('.bloco');
-        const btn = button.classList.add('selecionado');
         pai.classList.add('active');
         selecionado = pai;
     });
 });
+
+//especie de loop pra selecionar os botoes de comando, juntando com
+//o anterior, os comandos vao sempre pro bloco selecionado 
+const cmd = document.querySelectorAll('.btn');
+
+cmd.forEach((button) => {
+    button.addEventListener('click', () =>{
+        comandos[selecionado.id].push(button.id);
+        console.log(comandos[selecionado.id]);
+    });
+});
+
+
+
+
+
 
 function andar(){ //funcao pra fazer o robo andar
     const min = 1, max = 5;
